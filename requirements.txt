@@ -1,0 +1,8 @@
+edge-tts
+fastapi
+google-generativeai
+pypdf
+python-dotenv
+python-multipart
+sqlalchemy
+uvicorn
