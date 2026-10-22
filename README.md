@@ -24,7 +24,42 @@ The project uses Python-based application development and AI-related technologie
 
 ## Project Objective
 
-The objective of DevCast AI Studio is to explore how artificial intelligence and speech technologies can improve programming education. It demonstrates how code-related information can be presented in an accessible audio format, helping learners review concepts and study more flexibly.
+The objective of DevCast AI Studio is to explore how artificial intelligence and speech technologies can improve programming education. It demonstrates how code-related information can be presented in an accessible audio format, helping learners review concepts and study more flexibly. 
+
+
+
+### Prerequisites
+* Python 3.10+ or Node.js (depending on your UI stack)
+* `ffmpeg` installed on your system PATH for audio concatenation and normalization
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/Abhilash-baratam/DevCast-AI-Studio.git](https://github.com/Abhilash-baratam/DevCast-AI-Studio.git)
+   cd DevCast-AI-Studio
+Create virtual environment & install dependencies:
+
+Bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+pip install -r requirements.txt
+Set up environment keys:
+
+Bash
+cp .env.example .env
+
+# Add your LLM keys and TTS provider keys inside .env
+Running the Studio
+Generate a podcast via CLI:
+
+Bash
+python generate_cast.py --source [https://github.com/Abhilash-baratam/nanogpt-dpo-streaming](https://github.com/Abhilash-baratam/nanogpt-dpo-streaming) --output episode_1.mp3
+
+Launch UI Dashboard:
+
+Bash
+python app.py  # or npm run dev if frontend is decoupled
 
 ## Conclusion
 
